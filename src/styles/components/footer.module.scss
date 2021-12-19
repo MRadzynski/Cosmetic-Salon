@@ -1,0 +1,14 @@
+@import '../shared/colors';
+
+.footerContainer {
+	align-items: center;
+	background-color: white;
+	box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	.author {
+		color: $primaryColor;
+	}
+}
