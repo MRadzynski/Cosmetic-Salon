@@ -1,0 +1,36 @@
+@import '../main.scss';
+
+.actionButtonContainer {
+	position: absolute;
+
+	.actionButton {
+		align-items: center;
+		background-color: $transparent;
+		border: 0.25rem solid $primaryColorTransparent;
+		box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.2);
+		color: $primaryColor;
+		display: flex;
+		font-size: 1.2rem;
+		font-weight: 600;
+		padding: 1rem 2.5rem;
+		text-decoration: none;
+		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+		@include no-selectable;
+
+		&:hover {
+			background-color: $primaryColorTransparent;
+			border: 0.25rem solid $transparent;
+			color: white;
+
+			.arrow {
+				left: 12%;
+			}
+		}
+
+		.arrow {
+			left: 3%;
+			position: relative;
+			transition: all 0.2s ease-out;
+		}
+	}
+}

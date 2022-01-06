@@ -9,17 +9,24 @@
 	position: relative;
 	width: 100%;
 
-	@include breakpoint($laptop) {
+	@include breakpoint($xsLaptop) {
 		padding: 0 5rem;
 	}
 
 	.logoContainer {
 		height: 100%;
-		width: 10%;
+		width: 30%;
+		@include no-selectable;
+
+		@include breakpoint($xsLaptop) {
+			width: 10%;
+		}
 
 		.logo {
 			height: 100%;
 			width: 100%;
+			position: relative;
+			z-index: 9;
 		}
 	}
 }
