@@ -1,24 +1,54 @@
-@import '../shared/colors';
+@import '../main.scss';
 
 .navLinksContainer {
-	height: 100%;
-	width: 90%;
+	background-color: white;
+	height: 100vh;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100vw;
 
-	.navLinks {
+	@include breakpoint($laptop) {
 		align-items: center;
 		display: flex;
 		height: 100%;
 		justify-content: flex-end;
+		overflow: auto;
+		position: relative;
+		width: 90%;
+	}
+
+	.navLinks {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		height: 100%;
+		justify-content: center;
 		list-style: none;
-		margin-right: 5rem;
+		@include no-selectable;
+
+		@include breakpoint($laptop) {
+			align-items: center;
+			flex-direction: row;
+			height: 75%;
+			justify-content: flex-end;
+			width: 100%;
+		}
 
 		.navLink {
-			background-color: white;
-			height: 100%;
-			width: 10%;
+			border-radius: 0.5rem;
+			transition: all 0.2s ease-out;
+			width: 40%;
+
+			@include breakpoint($laptop) {
+				height: 100%;
+				width: 10%;
+			}
 
 			&:hover {
 				background-color: $primaryColor;
+				border-radius: 42% 27% 24% 36% / 100% 0% 100% 0%;
 			}
 
 			a {
@@ -37,6 +67,7 @@
 			}
 			.active {
 				background-color: $primaryColor;
+				border-radius: 51% 49% 30% 70% / 100% 0% 100% 0%;
 				color: white;
 			}
 		}

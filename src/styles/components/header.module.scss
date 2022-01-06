@@ -1,4 +1,4 @@
-@import '../shared/colors';
+@import '../main.scss';
 
 .headerContainer {
 	align-items: center;
@@ -6,7 +6,12 @@
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	display: flex;
 	justify-content: space-around;
+	position: relative;
 	width: 100%;
+
+	@include breakpoint($laptop) {
+		padding: 0 5rem;
+	}
 
 	.logoContainer {
 		height: 100%;

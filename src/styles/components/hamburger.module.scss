@@ -1,0 +1,15 @@
+.hamburgerContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	left: 7%;
+	position: absolute;
+	top: 45%;
+	z-index: 9;
+
+	.bar {
+		background-color: rgba(0, 0, 0, 0.75);
+		height: 0.125rem;
+		width: 1rem;
+	}
+}

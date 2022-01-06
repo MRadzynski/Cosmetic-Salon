@@ -1,10 +1,13 @@
 import { NavLink } from 'react-router-dom';
 
-import navLinksData from '../data/nav.json';
+import navLinksData from '../../data/nav.json';
 
 import classes from '../../styles/components/navbar.module.scss';
+interface Props {
+	closeMobileMenu?: () => void;
+}
 
-const Navbar = () => {
+const Navbar = ({ closeMobileMenu }: Props) => {
 	const { navLinks } = navLinksData;
 
 	return (
@@ -15,6 +18,7 @@ const Navbar = () => {
 						<NavLink
 							className={(navData) => (navData.isActive ? classes.active : '')}
 							to={link.path}
+							onClick={closeMobileMenu}
 						>
 							{link.label}
 						</NavLink>
