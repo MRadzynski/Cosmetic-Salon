@@ -1,0 +1,24 @@
+{
+	"navLinks": [
+		{
+			"label": "O nas",
+			"path": "/o-nas"
+		},
+		{
+			"label": "Galeria",
+			"path": "/galeria"
+		},
+		{
+			"label": "Oferta",
+			"path": "/oferta"
+		},
+		{
+			"label": "Cennik",
+			"path": "/cennik"
+		},
+		{
+			"label": "Kontakt",
+			"path": "/kontakt"
+		}
+	]
+}
